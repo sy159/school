@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/doctor.css">
+</head>
+<body>
+<article>
+    <section>
+        <h3>预约排队</h3>
+        <dl>
+            <dd><a href="javascript:;">选择科别</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;" class="aft">选择医生</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;">选择时间</a></dd>
+        </dl>
+    </section>
+    <div class="doctor">
+        {% for i in data %}
+         {% if i.sex == '女' %}
+        <a href="/time/p={{ i.id }}" target="main">
+            <figure>
+                <img src="/static/images/女性-人物.png">
+                <figcaption>
+                    <h4>{{ i.name }}</h4>
+                    <small>{{ i.seniority }}</small>
+                </figcaption>
+            </figure>
+        </a>
+            {% else %}
+            <a href="/time/p={{ i.id }}" target="main">
+            <figure>
+                <img src="/static/images/人物.png">
+                <figcaption>
+                    <h4>{{ i.name }}</h4>
+                    <small>{{ i.seniority }}</small>
+                </figcaption>
+            </figure>
+        </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="back">
+        <a href="{% url 'k1' %}" target="main">返回上一页</a>
+    </div>
+</article>
+
+
+
+</body>
+</html>

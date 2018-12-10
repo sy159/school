@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/kl.css">
+    <script>
+        window.onload= function () {
+            var oTab=document.getElementById('tab1');
+            for(var i=0;i<oTab.rows.length;i++){
+                if(i%2){
+                    oTab.rows[i].style.background='#E4EDFD';
+                }
+                else{
+                    oTab.rows[i].style.background='';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<article>
+    <section>
+        <h3>预约排队</h3>
+        <dl>
+            <dd><a href="javascript:;" class="aft">选择科别</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;">选择医生</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;">选择时间</a></dd>
+        </dl>
+    </section>
+    <table border="1" bordercolor="#B9CFD8" style="width: 88%;border-collapse:collapse;" id="tab1">
+        <tr>
+        {% for i in data %}
+        {% if forloop.counter|divisibleby:'4' %}
+            <td><a href="/doctor/p={{ i.did }}">{{ i.dname }}</a></td>
+            </tr>
+            {% else %}
+            <td><a href="/doctor/p={{ i.did }}">{{ i.dname }}</a></td>
+        {% endif %}
+        {% endfor %}
+    </table>
+</article>
+</body>
+</html>

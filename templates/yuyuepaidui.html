@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/yuyuepaidui.css">
+</head>
+<body>
+<header>
+    <aside>
+        <a href="{% url 'login' %}">你好！<span>{{ tel }}</span></a><a href="{% url 'login_out' %}">注销</a>
+    </aside>
+    <section>
+        <div class="left">
+            <a href="{% url 'login' %}"><img src="/static/images/ziti.png"></a>
+            <span>帮助你利用时间</span>
+        </div>
+    </section>
+    <ul>
+        <li><a href="{% url 'index' %}">首页</a></li>
+        <li><a href="{% url 'home' %}">排号流程</a></li>
+        <li><a href="#">预约挂号</a></li>
+        <li><a href="#">免费咨询</a></li>
+        <li><a href="{% url 'center' %}">个人中心</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</header>
+<main>
+    <aside>
+        <h2>预约流程</h2>
+        <ul>
+            <li>选择科别</li>
+            <li><img src="/static/images/arrow.png"></li>
+            <li>选择医生</li>
+            <li><img src="/static/images/arrow.png"></li>
+            <li>选择就诊时间</li>
+        </ul>
+    </aside>
+    <iframe src="{% url 'k1' %}" name="main" frameborder="0" scrolling="no"></iframe>
+</main>
+<div id="footer"></div>
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $('#footer').load('{% url 'footer' %}');
+    });
+</script>
+</body>
+</html>

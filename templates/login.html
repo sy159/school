@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body style="height: 100%;">
+<header>
+    <div class="left">
+        <a href="index.html"><img src="/static/images/ziti.png"></a>
+        <span>帮助你利用时间</span>
+    </div>
+</header>
+<main>
+    <form action="/login/" id="form1" method="post">
+        {% csrf_token %}
+        <b>欢迎登录</b>
+        <label class="y">
+            电话号码：<input name="tel" type="text" class="form-control" placeholder="手机号" pattern='1[3|4|5|8][0-9]\d{8}' required>
+           <em style="color: red">{{ tel_error }}</em>
+            <span></span>
+        </label>
+        <label class="y">
+            登录密码：<input name="password" type="password" class="form-control" placeholder="密码 " pattern='([a-zA-Z0-9]{6,12}' required>
+            <em style="color: red">{{ pwd_error }}</em>
+            <span></span>
+        </label>
+        <label class="yz">
+            验&nbsp;证&nbsp;码：<input name="val" type="text" placeholder="请输入验证码">
+          <a  style="display: inline-block;margin-top: -10px" href="{% url 'login' %}"><img src="/static/test.png"></a>
+            <em style="color: red">{{ error }}</em>
+
+        </label>
+        <label class="agree">
+            <input type="checkbox" checked>记住密码<a href="#">忘记密码？</a>
+        </label>
+            <button type="submit">登录</button>
+        <p>还未有账号？<a href="{% url 'register' %}">立即注册</a></p>
+    </form>
+    <aside>
+        <h3>登录之后你可以</h3>
+        <p>
+            <img src="/static/images/人事.png" style="width: 30px;height: 30px;">
+            选择医院，进行预约排队，在线等候
+        </p>
+        <p>
+            <img src="/static/images/手机.png" style="width: 30px;height: 30px;">
+            设置时间提醒，避免错过
+        </p>
+        <p>
+            <img src="/static/images/手机.png" style="width: 30px;height: 30px;">
+            选择不同的提醒方式，体验不同的服务
+        </p>
+        <img src="/static/images/process.PNG" style="width: 580px;height: 170px">
+    </aside>
+</main>
+<script src="/static/js/eventCompatible.js"></script>
+<script>
+    var aReg=[/^1[3|4|5|8][0-9]\d{8}$/,/^[a-zA-Z0-9]{6,12}$/];
+    var oForm=document.getElementById('form1');
+    var aInput=oForm.querySelectorAll('.form-control');
+    var aSpan=oForm.querySelectorAll('span');
+    for(var i=0;i<aInput.length;i++){
+        aInput[i].i=i;
+    }
+    eventCompatible.agentEvent(oForm,'click',['input','form-control'], function () {
+        eventCompatible.addEvent(this,'blur',check);
+        function check(){
+            var i=this.i;
+            var oSpan=aSpan[i];
+            if(aReg[i].test(this.value.trim())){
+                oSpan.innerHTML='<img src="/static/images/true.png">';
+            }
+            else{
+                console.log(aReg[i].test(this.value.trim()));
+                oSpan.innerHTML='<img src="/static/images/false.png">';
+            }
+            eventCompatible.removeEvent(this,'blur',check);
+        }
+    });
+
+</script>
+
+</body>
+</html>

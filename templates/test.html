@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="1">我爱你中国，亲爱的母亲</h2>
+<script>
+    //实现跑马灯功能
+    function f() {
+        //获取id整个标签
+        var tag=document.getElementById("1");
+        //获取标签里面具体的内容
+        var content=tag.innerText;
+        //字符串的第几个位置
+        var a=content.charAt(0);
+        //相当于切片
+        var b=content.substring(1,content.length);
+        var new_con=b+a;
+        tag.innerText=new_con;
+    }
+    setInterval("f()",500)
+</script>
+</body>
+</html>

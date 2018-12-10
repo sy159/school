@@ -1,0 +1,73 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+article {
+  width: 100%;
+  border: 1px solid #D2D2D2;
+  padding: 20px;
+}
+article figure {
+  display: flex;
+  justify-content: flex-start;
+}
+article figure img {
+  margin-right: 15px;
+}
+article figure figcaption h3 {
+  padding: 10px 0;
+}
+article figure figcaption p {
+  color: #00539B;
+  font-size: 16px;
+  line-height: 30px;
+}
+article form {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid green;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+article form section label {
+  line-height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+article form section label:first-child p {
+  margin-right: 20px;
+}
+article form section label:first-child p a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+article form section label:nth-of-type(2) span {
+  margin-right: 65px;
+}
+article form section label:nth-of-type(2) span:last-of-type {
+  margin-right: 20px;
+}
+article form section label:nth-of-type(2) span input {
+  margin-right: 10px;
+}
+article form section label:nth-of-type(2) small {
+  color: red;
+}
+article form section label:nth-of-type(3) small {
+  color: red;
+  margin-left: 20px;
+}
+article form button {
+  margin-left: 150px;
+  height: 30px;
+  border: none;
+  background-color: #007dd1;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+}

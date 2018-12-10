@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易排队首页</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<header>
+    <aside>
+        <a href="{% url 'login' %}">登录</a><a href="{% url 'register'%}">注册</a>
+    </aside>
+    <section>
+        <div class="left">
+            <a href="index.html"><img src="/static/images/ziti.png"></a>
+            <span>帮助你利用时间</span>
+        </div>
+        <form>
+            <input type="text" placeholder="请输入医院名字"><button>搜索</button>
+        </form>
+    </section>
+    <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="#">排号流程</a></li>
+        <li><a href="/yuyuepaidui">预约挂号</a></li>
+        <li><a href="#">免费咨询</a></li>
+        <li><a href="/center">个人中心</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</header>
+<main>
+    <div class="xn">
+        <figure>
+            <section>
+                <img src="/static/images/xn.jpg">
+                <a href="https://baike.h.gov.cn/word/62693">
+                    <span>百科</span><span>进入医院词条</span>
+                </a>
+                <p>
+                    <a href="#">
+                        <img src="/static/images/love.png">
+                        <span>关注</span>
+                    </a>
+                    <span>4435</span>
+                </p>
+            </section>
+            <figcaption>
+                <aside>
+                    <h1>陆军军医大学第一附属医院（西南医院）</h1>
+                    <span>三级甲等</span>
+                </aside>
+                <p><b>地址：</b>重庆市沙坪坝高滩岩正街30号<a href="javascript:;">查看地图</a></p>
+                <p><b>电话：</b>023-68754000</p>
+                <p><b>官网：</b> http://www.xnyy.cn/XNYYFore/default.aspx</p>
+                <p><b>简介：</b>陆军军医大学第一附属医院（西南医院）展开床位2200余张，设备总值6.5亿元，年门急诊量134余万人次，住院收容6.4万人次...<a href="javascript:;">更多</a></p>
+            </figcaption>
+        </figure>
+        <aside>
+            <span><a href="{% url 'home' %}">挂号排队</a></span>
+            <p>
+                <span>预约量<a href="javascript:;">7.8万</a></span>
+                <span>患者评价<a href="javascript:;">2535</a></span>
+            </p>
+        </aside>
+    </div>
+    <div class="hx">
+        <figure>
+            <section>
+                <img src="/static/images/hx.jpg" style="width: 180px;height: 129px;">
+                <a href="https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%8D%8E%E8%A5%BF%E5%A6%87%E4%BA%A7%E5%8C%BB%E9%99%A2/10045918?fr=aladdin">
+                    <span>百科</span><span>进入医院词条</span>
+                </a>
+                <p>
+                    <a href="#">
+                        <img src="/static/images/love.png">
+                        <span>关注</span>
+                    </a>
+                    <span>3300</span>
+                </p>
+            </section>
+            <figcaption>
+                <aside>
+                    <h1>重庆华西妇产医院</h1>
+                </aside>
+                <p><b>地址：</b>重庆市九龙坡石桥铺渝州路37号（彩电中心对面）<a href="javascript:;">查看地图</a></p>
+                <p><b>电话：</b>023-68067777</p>
+                <p><b>官网：</b> http://http://www.cqhxfk.com/</p>
+                <p><b>简介：</b>重庆华西妇产医院开设产科、新生儿科、妇科等重点科室，下设优生优育、产前检查、围产期保健、妇女保健、儿童保健、围产期保健、产前检查...<a href="javascript:;">更多</a></p>
+            </figcaption>
+        </figure>
+        <aside>
+            <span><a href="{% url 'home' %}">挂号排队</a></span>
+            <p>
+                <span>预约量<a href="javascript:;">4.8万</a></span>
+                <span>患者评价<a href="javascript:;">2305</a></span>
+            </p>
+        </aside>
+    </div>
+    <div class="ykfs">
+        <figure>
+            <section>
+                <img src="/static/images/ykfs.jpg" style="width: 180px;height: 129px;">
+                <a href="https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E7%AC%AC%E4%B8%80%E5%8C%BB%E9%99%A2/7046235?fr=aladdin">
+                    <span>百科</span><span>进入医院词条</span>
+                </a>
+                <p>
+                    <a href="#">
+                        <img src="/static/images/love.png">
+                        <span>关注</span>
+                    </a>
+                    <span>5000</span>
+                </p>
+            </section>
+            <figcaption>
+                <aside>
+                    <h1>重庆医科大学附属第一医院</h1>
+                    <span>三级甲等</span>
+                </aside>
+                <p><b>地址：</b>重庆市渝中区袁家岗友谊路1号<a href="javascript:;">查看地图</a></p>
+                <p><b>电话：</b>023-68811360</p>
+                <p><b>官网：</b> http://www.hospital-cqmu.com/</p>
+                <p><b>简介：</b>重庆医科大学附属第一医院于1957年由原上海第一医学院（现复旦大学）附属医院分迁来渝创建，历经60余年的建设和发展，已成为全国首批“三级甲等医院”...<a href="javascript:;">更多</a></p>
+            </figcaption>
+        </figure>
+        <aside>
+            <span><a href="{% url 'home' %}">挂号排队</a></span>
+            <p>
+                <span>预约量<a href="javascript:;">8.8万</a></span>
+                <span>患者评价<a href="javascript:;">3005</a></span>
+            </p>
+        </aside>
+    </div>
+    <div class="yket">
+        <figure>
+            <section>
+                <img src="/static/images/yket.jpg" style="width: 180px;height: 129px;">
+                <a href="https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E5%84%BF%E7%AB%A5%E5%8C%BB%E9%99%A2/3384938?fr=aladdin">
+                    <span>百科</span><span>进入医院词条</span>
+                </a>
+                <p>
+                    <a href="#">
+                        <img src="/static/images/love.png">
+                        <span>关注</span>
+                    </a>
+                    <span>4000</span>
+                </p>
+            </section>
+            <figcaption>
+                <aside>
+                    <h1>重庆医科大学附属儿童医院</h1>
+                    <span>三级甲等</span>
+                </aside>
+                <p><b>地址：</b>重庆市渝中区中山二路136号<a href="https://yyk.familydoctor.com.cn/75/map/">查看地图</a></p>
+                <p><b>电话：</b>023-63622984</p>
+                <p><b>官网：</b>http://www.chcmu.com/</p>
+                <p><b>简介：</b>重庆医科大学附属儿童医院于1956年由上海医学院儿科系迁渝创建，是集医教研为一体的国家三级甲等综合性儿童医院...<a href="javascript:;">更多</a></p>
+            </figcaption>
+        </figure>
+        <aside>
+            <span><a href="{% url 'home' %}">挂号排队</a></span>
+            <p>
+                <span>预约量<a href="javascript:;">6.8万</a></span>
+                <span>患者评价<a href="javascript:;">3005</a></span>
+            </p>
+        </aside>
+    </div>
+</main>
+<div id="footer"></div>
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+       $('#footer').load("{% url 'footer' %}");
+    });
+</script>
+
+</body>
+</html>

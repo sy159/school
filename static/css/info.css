@@ -1,0 +1,32 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+article {
+  width: 100%;
+  border: 1px solid #D2D2D2;
+}
+article h4 {
+  padding-bottom: 15px;
+  margin: 20px;
+  border-bottom: 1px solid #D2D2D2;
+}
+article table {
+  width: inherit;
+  padding: 20px;
+}
+article table tr {
+  line-height: 35px;
+}
+article table tr td {
+  color: #444;
+  width: inherit;
+  position: relative;
+}
+article table tr td a {
+  text-decoration: none;
+  font-size: 14px;
+  position: absolute;
+  right: 20px;
+}

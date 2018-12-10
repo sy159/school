@@ -1,0 +1,114 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+.bcenter{
+  width: 1200px;
+  margin: 0 auto;
+}
+header{
+  padding: 0 200px 5px 200px;
+  display: flex;
+  div.left{
+    display: flex;
+    flex-direction: column;
+    img{
+      border-bottom: 2px solid #209639;
+    }
+    span{
+      margin-top: 10px;
+      text-align: center;
+      font-size: 18px;
+      color: #00539B;
+      letter-spacing: 13px;
+      font-weight: bold;
+    }
+  }
+  border-bottom: 3px solid #2B73CC;
+  margin-bottom: 50px;
+}
+main{
+  .bcenter;
+  display: flex;
+  //justify-content: center;
+  form{
+    width: 60%;
+    padding-left: 100px;
+    border-right: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    b{
+      font-size: 30px;
+      color:#00539B;
+      margin-bottom: 20px;
+    }
+    label{
+      display: inline;
+      color: #555555;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 15px 0;
+      input{
+        text-indent: 10px;
+        font-size: 15px;
+      }
+      &.y input{
+        width: 300px;
+        height: 30px;
+      }
+      &.yz input{
+        width: 200px;
+        height: 30px;
+      }
+      &.agree{
+        margin-left: 85px;
+        a{
+          text-decoration: none;
+          margin-left: 50px;
+        }
+      }
+    }
+    button{
+      margin-bottom: 15px;
+      width: 200px;
+      height: 40px;
+      outline: none;
+      background-color:#299968;
+      font-size: 20px;
+      color: #fff;
+      border: none;
+      margin-left: 80px;
+      &:hover{
+        background-color: blue;
+        transition: all .5s;
+      }
+    }
+    p{
+      color: #555555;
+      margin-left: 80px;
+      a{
+        text-decoration: none;
+        color: red;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  aside{
+    width: 40%;
+    padding-left: 50px;
+    p{
+      margin: 15px 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    >img{
+      margin-top: 50px;
+    }
+  }
+
+
+}

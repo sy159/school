@@ -1,0 +1,112 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+.bcenter {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  padding: 0 200px 5px 200px;
+  display: flex;
+  border-bottom: 3px solid #2B73CC;
+  margin-bottom: 50px;
+}
+header div.left {
+  display: flex;
+  flex-direction: column;
+}
+header div.left img {
+  border-bottom: 2px solid #209639;
+}
+header div.left span {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #00539B;
+  letter-spacing: 13px;
+  font-weight: bold;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+main form {
+  width: 60%;
+  padding-left: 100px;
+  border-right: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+main form b {
+  font-size: 30px;
+  color: #00539B;
+  margin-bottom: 20px;
+}
+main form label {
+  display: inline;
+  color: #555555;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+main form label input {
+  text-indent: 10px;
+  font-size: 15px;
+}
+main form label.y input {
+  width: 300px;
+  height: 30px;
+}
+main form label.yz input {
+  width: 200px;
+  height: 30px;
+}
+main form label.agree {
+  margin-left: 85px;
+}
+main form label.agree a {
+  text-decoration: none;
+  margin-left: 50px;
+}
+main form button {
+  margin-bottom: 15px;
+  width: 200px;
+  height: 40px;
+  outline: none;
+  background-color: #299968;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  margin-left: 80px;
+}
+main form button:hover {
+  background-color: blue;
+  transition: all .5s;
+}
+main form p {
+  color: #555555;
+  margin-left: 80px;
+}
+main form p a {
+  text-decoration: none;
+  color: red;
+}
+main form p a:hover {
+  text-decoration: underline;
+}
+main aside {
+  width: 40%;
+  padding-left: 50px;
+}
+main aside p {
+  margin: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main aside > img {
+  margin-top: 50px;
+}

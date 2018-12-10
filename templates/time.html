@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/time.css">
+</head>
+<body>
+<article>
+    <section>
+        <h3>预约排队</h3>
+        <dl>
+            <dd><a href="javascript:;">选择科别</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;">选择医生</a></dd>
+            <dd><img src="/static/images/tri_arrow.png"></dd>
+            <dd><a href="javascript:;" class="aft">选择时间</a></dd>
+        </dl>
+    </section>
+    <div></div>
+    <table border="1" bordercolor="#B9CFD8" style="width: 88%;border-collapse:collapse;" id="tab1">
+        <tr>
+            <td><a onclick="f(1)" id="1" href="{% url 'center' %}" target="_blank">{{ date1 }}<small>({{ day }})</small></a></td>
+            <td><a onclick="f(2)" id="2" href="{% url 'center' %}" target="_blank">{{ date2 }}<small>({{ day2 }})</small></a></td>
+            <td><a onclick="f(3)" id="3" href="{% url 'center' %}" target="_blank">{{ date3 }}<small>({{ day3 }})</small></a></td>
+            <td><a onclick="f(4)" id="4" href="{% url 'center' %}" target="_blank">{{ date4 }}<small>({{ day4 }})</small></a></td>
+            <td><a onclick="f(5)" id="5" href="{% url 'center' %}" target="_blank">{{ date5 }}<small>({{ day5 }})</small></a></td>
+            <td><a onclick="f(6)" id="6" href="{% url 'center' %}" target="_blank">{{ date6 }}<small>({{ day6 }})</small></a></td>
+            <td><a onclick="f(7)" id="7" href="{% url 'center' %}" target="_blank">{{ date7 }}<small>({{ day7 }})</small></a></td>
+        </tr>
+    </table>
+    <div>
+        <a href="/doctor/p={{ id }}" target="main">返回上一页</a>
+    </div>
+</article>
+<script>
+    function f(b) {
+        alert('你已经成功预约！预约时间为:第' + b+'天');
+    }
+</script>
+</body>
+</html>

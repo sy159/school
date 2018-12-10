@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的排号</title>
+    <link rel="stylesheet" href="/static/css/wodepaihao.css">
+</head>
+<body>
+<article>
+    <figure>
+         <img src="/static/images/xn.jpg">
+        <figcaption>
+            <h3>陆军军医大学第一附属医院（西南医院）</h3>
+            <p>{{ name.dname }}</p>
+            <p>{{ doc_name.name }}<small>({{ doc_name.seniority }})</small></p>
+            <p>星期三（2018-06-26）</p>
+        </figcaption>
+    </figure>
+    <form>
+        <section>
+        <label>
+            <p>前面排队人数：<a href="javascript:;">{{ data.num }}</a></p>
+            <p>预计需要分钟数：<a href="javascript:;">{{ time }}</a></p>
+        </label>
+        <label>
+            <span><input type="checkbox">短信提醒</span>
+            <span><input type="checkbox">语音提醒</span>
+            <small>(默认前15分钟和到号各提醒一次)</small>
+        </label>
+        <label>
+            设置时间：
+            <select>
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+                <option>60</option>
+            </select>
+            分钟<small>(自定义选择提醒时间增加提醒次数)</small>
+        </label>
+            </section>
+        <button class="btn">确定</button>
+    </form>
+</article>
+</body>
+</html>

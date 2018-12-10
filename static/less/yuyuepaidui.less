@@ -1,0 +1,113 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+
+}
+.bcenter{
+  width: 1200px;
+  margin:0 auto;
+}
+header{
+  //background-color: #F6F8F9;
+  margin-bottom: 50px;
+  aside{
+    height: 30px;
+    background-color:#F5F5F5;
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 220px;
+    align-items: center;
+    a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: red;
+        text-decoration: underline;
+      }
+      &:first-child{
+        margin-right: 15px;
+        padding-right: 15px;
+        border-right: 1px solid #c6b4a8;
+        span{
+          color: red;
+        }
+      }
+    }
+
+  }
+  section{
+    .bcenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div.left{
+      display: flex;
+      flex-direction: column;
+      img{
+        border-bottom: 2px solid #209639;
+      }
+      span{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #00539B;
+        letter-spacing: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+  ul{
+    border-bottom: 3px solid #2B73CC;
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li{
+      a{
+        display: block;
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px 25px 7px 25px;
+        &:hover{
+          background-color:#2B73CC;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+main{
+  .bcenter;
+  display: flex;
+  aside{
+    width: 20%;
+    margin-right:5%;
+    h2{
+      font-size: 23px;
+      background-image:-webkit-linear-gradient(top, #00539B, #02A8DA);
+      color: #fff;
+      padding: 10px 15px;
+    }
+    ul{
+      text-align: center;
+      border: 1px solid #E4E0E0;
+      list-style: none;
+      padding: 10px;
+      li{
+        line-height: 30px;
+        color: #555555;
+        font-weight: bold;
+      }
+    }
+  }
+  iframe{
+    width: 75%;
+    height: 387px;
+    border: 1px solid #E4E0E0;
+  }
+}

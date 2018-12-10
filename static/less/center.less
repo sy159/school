@@ -1,0 +1,118 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  //background-color:#F6F8F9;
+}
+.bcenter{
+  width: 1200px;
+  margin:0 auto;
+}
+header{
+  margin-bottom: 30px;
+  aside{
+    height: 30px;
+    background-color:#F5F5F5;
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 220px;
+    align-items: center;
+    a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: red;
+        text-decoration: underline;
+      }
+      &:first-child{
+        margin-right: 15px;
+        padding-right: 15px;
+        border-right: 1px solid #c6b4a8;
+        span{
+          color: red;
+        }
+      }
+    }
+
+  }
+  section{
+    .bcenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div.left{
+      display: flex;
+      flex-direction: column;
+      img{
+        border-bottom: 2px solid #209639;
+      }
+      span{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #00539B;
+        letter-spacing: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+  ul{
+    border-bottom: 3px solid #2B73CC;
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li{
+      a{
+        display: block;
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px 25px 7px 25px;
+        &:hover{
+          background-color:#2B73CC;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+main{
+  .bcenter;
+  display: flex;
+  aside{
+    background-color: #F5F5F5;
+    width: 20%;
+    margin-right: 5%;
+    border: 1px solid #D2D2D2;
+    h3{
+      padding: 10px 15px;
+    }
+    ul{
+      list-style: none;
+      li{
+        line-height: 35px;
+        a{
+          display: block;
+          width: inherit;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #444;
+          font-size: 16px;
+          &:hover{
+            color: #fff;
+            background-color: #00539B;
+          }
+        }
+      }
+    }
+  }
+  iframe{
+    width: 75%;
+    height: 307px;
+    border: 1px solid #E4E0E0;
+  }
+}
